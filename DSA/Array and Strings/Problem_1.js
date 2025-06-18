@@ -9,3 +9,5 @@ for(let i=0; i<arr.length-1; i++){
     }
 }
 console.log(emptyArr,"\n","Total count of numbers = ",count);
+
+console.log('interview Day');

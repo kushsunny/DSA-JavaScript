@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h2>Result: <span id="result">0</span></h2>
+    
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    
+    <button id="add" onclick="calculate('add')">Add</button>
+    <button id="subtract" onclick="calculate('subtract')">Subtract</button>
+    <button id="multiply" onclick="calculate('multiply')">Multiply</button>
+
+    <script>
+        let result = 0;
+
+        function calculate(operation) {
+            let inputValue = parseFloat(document.getElementById("numberInput").value);
+
+            if (isNaN(inputValue)) {
+                alert("Please enter a valid number");
+                return;
+            }
+
+            if (operation === 'add') {
+                result += inputValue;
+            } else if (operation === 'subtract') {
+                result -= inputValue;
+            } else if (operation === 'multiply') {
+                result *= inputValue;
+            }
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+
+</body>
+</html>
